@@ -32,7 +32,7 @@
 3. Run the application:
 
     ```sh
-    python main.py
+    python app.py
     ```
 
 ## 🖥 How to Use
