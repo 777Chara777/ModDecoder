@@ -15,7 +15,7 @@
 
 ### Windows (Standalone .exe Version)
 
-1. Download **ModDecoder.exe** from [Releases](https://github.com/your-repo/releases).
+1. Download **ModDecoder.exe** from [Releases](https://github.com/777Chara777/ModDecoder/releases).
 
 2. Run the `.exe` file and follow the instructions.
 
