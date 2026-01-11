@@ -4,6 +4,7 @@ import os
 class Configuration:
     def __init__(self, derictory: str = "./config.json"):
         self.derictory = derictory
+
     def check_config(self) -> bool:
         return os.path.isfile(self.derictory)
 

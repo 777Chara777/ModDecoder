@@ -170,9 +170,13 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# vscode ignore
+.vscode/
 
 # my funny settings
 Temp/
 test.py
 config.json
 build.txt
+todo.txt
+out/

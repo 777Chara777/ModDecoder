@@ -1,7 +1,9 @@
 import json
 import zipfile
 
-class FabricStructur:
+from .BaseStructur import BaseStructur
+
+class FabricStructur(BaseStructur):
     @staticmethod
     def get_info_mod(path: str) -> dict:
         with zipfile.ZipFile(path, 'r') as mod:

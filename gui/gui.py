@@ -6,7 +6,7 @@ import dearpygui.dearpygui as dpg
 
 from libs.Logger.logger import Logger
 from libs.StoppableThread import StoppableThread
-from FabricStructur.FabricStructur import FabricStructur
+from Structurs.FabricStructur import FabricStructur
 
 class GUIMain:
     set_text = "Decoder"
@@ -90,6 +90,9 @@ class GUIMain:
         dpg.show_style_editor()
 
     def update_mod_info(self, path:str):
+        # Избавиться от FabricStructur перенести в app
+        # В файле gui должа быть толька графика!
+        
         data_fabric_config = FabricStructur.get_info_mod(path)
         dpg.set_value("info", f"Name: {data_fabric_config[ 'name' ]}\nVersion: {data_fabric_config[ 'version' ]}\nMinecraftV: {data_fabric_config[ 'depends' ][ 'minecraft' ]}")
     
@@ -130,6 +133,14 @@ class GUIMain:
             dpg.add_button(label="Cancel", callback=self.button_cancel, width=-1)
 
         self._center_item(dadadan, main_manu_window)
+
+        # Font setup
+        with dpg.font_registry():
+            with dpg.font("./font/Nunito-Bold.ttf", 20, default_font=True, tag="Default font"):
+                self.logger.debug("Init Font: Nunito-Bold how Default font")
+                dpg.add_font_range_hint(dpg.mvFontRangeHint_Cyrillic)
+
+        dpg.bind_font("Default font")
 
         dpg.create_viewport(title="Decoder", width=800, height=600, decorated=True)
         dpg.set_viewport_resizable(False)
